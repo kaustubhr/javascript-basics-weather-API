@@ -6,7 +6,7 @@ Visual studio code (IDE) with live server by ritwik dey
 Reference : 1. https://www.youtube.com/watch?v=W6NZfCO5SIk
             2. https://www.youtube.com/watch?v=wPElVpR1rwA
             
-![Screenshot](Capture.png)
+![Screenshot](Capture.PNG)
 
 
 
