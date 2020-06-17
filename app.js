@@ -2,8 +2,11 @@ window.addEventListener('load',()=> {
     let long,lat;
     let temperatureDescription = document.querySelector('.temperature-description');
     let temperatureDegree = document.querySelector('.temperature-degree');
+    let highTemperatureDegree = document.querySelector('.high-temperature-degree');
+    let lowTemperatureDegree = document.querySelector('.low-temperature-degree');
+
     let locationCity = document.querySelector('.location-city');
-    let degreeSection = document.querySelector('.degree-section');
+    let degreeSection = document.querySelector('.t');
     let degreeSectionSpan = document.querySelector('.degree-span');
     let weathericon = document.getElementById('weather-icon');
    
@@ -23,21 +26,13 @@ window.addEventListener('load',()=> {
                 )
                 .then(data => {console.log(data);
                 const {city,country} = data.observations.location[0];
-                const {temperature,description,iconLink,icon} = data.observations.location[0].observation[0];
+                const {highTemperature,lowTemperature,temperature,description,iconLink,icon} = data.observations.location[0].observation[0];
                 weathericon.src = "https://weather.api.here.com/static/weather/icon/"+ icon + ".png";
-
-
-                    
-                    
+                temperatureDegree.textContent = temperature;
+                highTemperatureDegree.textContent = highTemperature;
+                lowTemperatureDegree.textContent = lowTemperature;   
                 
-                //set DOM elements from API
-                
-                // temperatureDegree.textContent = temperature;
-                // if(temperature < 20){
-                //     document.getElementById('weather-icon').src = "cold.png";
-                // }
-
-                
+               
                 
                 temperatureDescription.textContent = description;
                 locationCity.textContent = city + ' , ' + country  ;
@@ -45,10 +40,15 @@ window.addEventListener('load',()=> {
                     if(degreeSectionSpan.textContent === "C"){
                         degreeSectionSpan.textContent = "F";
                         temperatureDegree.textContent = Math.floor((9/5) * temperature + 32);
+                        highTemperatureDegree.textContent = Math.floor((9/5) * highTemperature + 32);
+                        lowTemperatureDegree.textContent = Math.floor((9/5) * lowTemperature + 32);
                     }
                     else{
                         degreeSectionSpan.textContent = "C";
                         temperatureDegree.textContent = temperature;
+                        highTemperatureDegree.textContent = highTemperature;
+                        lowTemperatureDegree.textContent = lowTemperature;
+
 
                     }
 

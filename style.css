@@ -15,26 +15,51 @@ body{
     font-family: sans-serif;
 }
 .location,
-.temperature {
+.tempDetails {
+    
+    width: auto;
     height: 30vh;
-    width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    
 }
-.temperature{
+.tempDetails{
     flex-direction: column;
+    
+
 }
-.degree-section
+
+.temp-related, .ht,.lt,.t
 {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    flex-direction: row;
+    
+
 }
-.degree-section span{
+.ht,.t,.lt{
+    margin: 20px;
+}
+h4,h5,span{
     margin: 5px;
+}
+.temperature{
+    margin: auto;
+}
+.temperature span{
+    margin: 5px;
+    font-size: 20px;
+}
+.temperature h2{
+    font-size: 35px;
+}
+.temperature h5{
     font-size: 30px;
 }
-.degree-section h2{
-    font-size: 40px;
+#degree-span{
+    margin: 5px;
+    font-size: 35px;
 }
