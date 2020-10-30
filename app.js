@@ -37,7 +37,7 @@ window.addEventListener('load',()=> {
                 temperatureDescription.textContent = description;
                 locationCity.textContent = city + ' , ' + country  ;
                 degreeSection.addEventListener("click", function(){
-                    if(degreeSectionSpan.textContent === "C"){
+                    if(degreeSectionSpan.textContent == "C"){
                         degreeSectionSpan.textContent = "F";
                         temperatureDegree.textContent = Math.floor((9/5) * temperature + 32);
                         highTemperatureDegree.textContent = Math.floor((9/5) * highTemperature + 32);
