@@ -7,7 +7,9 @@ window.addEventListener('load',()=> {
 
     let locationCity = document.querySelector('.location-city');
     let degreeSection = document.querySelector('.t');
-    let degreeSectionSpan = document.querySelector('.degree-span');
+    let els = document.getElementsByClassName("degree-span");
+    
+   
     let weathericon = document.getElementById('weather-icon');
    
     
@@ -19,6 +21,7 @@ window.addEventListener('load',()=> {
             lat = position.coords.latitude;
             console.log(lat);
             console.log(long);
+            console.log(els);
             
             const api = `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${long}&oneobservation=true&apiKey=6rH6XtfVycYzaX4buiKNvZJlH9KNV-Q2pjMdj4XaBjw`
             fetch(api).then(response => {
@@ -36,15 +39,28 @@ window.addEventListener('load',()=> {
                 
                 temperatureDescription.textContent = description;
                 locationCity.textContent = city + ' , ' + country  ;
+                
+                console.log(els);
+                
                 degreeSection.addEventListener("click", function(){
-                    if(degreeSectionSpan.textContent == "C"){
-                        degreeSectionSpan.textContent = "F";
+                    if(els[0].textContent == "C"){
+                        
+                        els[0].textContent = "F";
+                        els[1].textContent = "F";
+                        els[2].textContent = "F";
+                        
+                        
+                        //els.textContent = "F";
                         temperatureDegree.textContent = Math.floor((9/5) * temperature + 32);
                         highTemperatureDegree.textContent = Math.floor((9/5) * highTemperature + 32);
                         lowTemperatureDegree.textContent = Math.floor((9/5) * lowTemperature + 32);
                     }
                     else{
-                        degreeSectionSpan.textContent = "C";
+                        //els.textContent = "C";
+                        
+                        els[0].textContent = "C";
+                        els[1].textContent = "C";
+                        els[2].textContent = "C";
                         temperatureDegree.textContent = temperature;
                         highTemperatureDegree.textContent = highTemperature;
                         lowTemperatureDegree.textContent = lowTemperature;
