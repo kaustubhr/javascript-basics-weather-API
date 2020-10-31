@@ -7,7 +7,7 @@ window.addEventListener('load',()=> {
 
     let locationCity = document.querySelector('.location-city');
     let degreeSection = document.querySelector('.t');
-    let els = document.getElementsByClassName("degree-span");
+    let els = document.getElementsByClassName('degree-span');
     
    
     let weathericon = document.getElementById('weather-icon');
