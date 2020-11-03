@@ -2,41 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./style.css" />
-    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./boots.css" />
+
+<title>
+    Weather App
+</title>
+
 </head>
-<body>
-    
-   <div class = "location">
-       <h1 class = "location-city">city</h1>
-       <img id="weather-icon" alt="Icon" width="80px"/>
-   </div>
-   <div class= "tempDetails">
-       <div class="temperature">
-            <div class="temp-related">
-                <div class="ht">
-                    <h4>high-temperature</h4>
-                    <h5 class = "high-temperature-degree"></h5>
-                    <span class="degree-span">C</span>
-                </div>
-                <div class="t">
-                    <h4>temperature</h2>
-                    <h2 class = "temperature-degree"></h2>
-                    <span class="degree-span">C</span>
-                </div>
-                <div class = "lt">
-                    <h4>low-temperature</h5>
-                    <h5 class = "low-temperature-degree"></h5>
-                    <span class="degree-span">C</span>
-                </div>
+<body class="text-white">
+    <div class="container h-100">
+        
+
+        <div class = "row h-25">
+            <div class="col-md-9 d-flex justify-content-center align-items-center ">
+                <h1 class = "location-city">city</h1>
+            </div>
+            
+            <div class="col-md-3 pb-4 d-flex justify-content-center">
+                <img id="weather-icon" alt="Icon" width="70px"/>
             </div>
         </div>
-        <div class="temperature-description">Very Cold
+     
+
+    
+   
+        <div class="row d-flex align-items-center h-50">
+            
+            <div class="col-md">
+                <div class="row d-flex  justify-content-center">
+                    
+                    <h5>high-temperature </h5>&nbsp;&nbsp;&nbsp;
+                    <h4 class = "high-temperature-degree"></h4>&nbsp;&nbsp;&nbsp;
+                    <h5><span class="degree-span">C</span></h5>
+                
+                                       
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="t">
+                    <div class="row d-flex justify-content-center">
+                        
+                            <h5>temperature </h5>&nbsp;&nbsp;&nbsp;
+                            <h4 class = "temperature-degree"></h4>&nbsp;&nbsp;&nbsp;
+                            <h5><span class="degree-span">C</span></h5>
+                        
+                    </div>
+                </div>
+            </div>
+                    
+            <div class = "col-md">
+                    <div class="row d-flex justify-content-center">
+                        
+                            <h5>low-temperature </h5>&nbsp;&nbsp;&nbsp;
+                            <h4 class = "low-temperature-degree"></h4>&nbsp;&nbsp;&nbsp;
+                            <h5><span class="degree-span">C</span></h5>
+                        
+                    </div>
+            </div>
+
         </div>
-   
+
+
+         
+
+    
+
+        <div class="row h-25 align-items-center">
+            <div class="col-md text-center ">
+                <div class="temperature-description">Very Cold</div>
+            </div>
+        </div>
+            
+            
     </div>
+
+
    
+    
+    
     <script src="app.js"></script>
    
 </body>
