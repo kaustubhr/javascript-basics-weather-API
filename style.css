@@ -1,65 +1,7 @@
-*{
-margin: 0;
-padding : 0;
-box-sizing : border-box;
-}
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    flex-direction: column;
-    background: linear-gradient(rgb(28, 175, 219),rgb(34, 13, 68));
-    color: white;
-    font-family: sans-serif;
-}
-.location,
-.tempDetails {
-    
-    width: auto;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.tempDetails{
-    flex-direction: column;
-    
 
-}
-
-.temp-related, .ht,.lt,.t
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    flex-direction: row;
-    
-
-}
-.ht,.t,.lt{
-    margin: 20px;
-}
-h4,h5,span{
-    margin: 5px;
-}
-.temperature{
-    margin: auto;
-}
-.temperature span{
-    margin: 5px;
-    font-size: 20px;
-}
-.temperature h2{
-    font-size: 35px;
-}
-.temperature h5{
-    font-size: 30px;
-}
-.degree-span{
-    margin: 5px;
-    font-size: 35px;
+height: 100vh;
+background: linear-gradient(rgb(28, 175, 219),rgb(34, 13, 68));
+font-family: "Comic Sans MS", cursive, sans-serif;
+color:white;
 }
